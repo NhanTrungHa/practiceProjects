@@ -2,7 +2,8 @@
 # regSearch.py
 # Usage: Read through all text files and return lines that matches a given regex
 
-import re, os
+import os
+import re
 
 # Save all files in a directory then sort all text files into a list
 allFiles = os.listdir(os.curdir)
