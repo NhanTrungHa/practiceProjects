@@ -1,5 +1,5 @@
 #! python3
-#! randomQuizGenerator.py
+# randomQuizGenerator.py
 
 import random
 
