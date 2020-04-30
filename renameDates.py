@@ -25,3 +25,11 @@ for amerFileName in os.listdir('.'):
     afterPart = mo.group(5)
 
 # Form European filename.
+euroFilename = beforePart + dayPart + '-' + monthPart + '-' + yearPart + afterPart
+
+absWorkingDir = os.path.abspath('.')
+amerFileName = os.path.join(absWorkingDir, amerFileName)
+euroFilename = os.path.join(absWorkingDir, euroFilename)
+
+print(f'Renaming "{amerFileName}" to "{euroFilename}"...')
+shutil.move(amerFileName, euroFilename)
