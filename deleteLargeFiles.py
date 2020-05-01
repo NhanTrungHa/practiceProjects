@@ -9,5 +9,5 @@ def deleteLargeFiles(folder):
     folder = os.path.abspath(folder)
     for foldername, subfolders, filenames in os.walk(folder):
         for filename in filenames:
-            if os.path.getsize(filename) >= 100000000:
+            if os.path.getsize(os.join(folder, filename)) >= 100000000:
                 send2trash.send2trash('filename')
