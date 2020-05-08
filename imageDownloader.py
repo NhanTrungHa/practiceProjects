@@ -25,6 +25,6 @@ else:
         imageFile = open(os.path.join('imgur', os.path.basename(imageUrl)), 'wb')
         for chunk in res.iter_content(100000):
             imageFile.write(chunk)
-            imageFile.close()
+        imageFile.close()
     print("Program complete!")
 
